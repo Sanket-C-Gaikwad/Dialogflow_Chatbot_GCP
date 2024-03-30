@@ -32,7 +32,7 @@ def send_to_dialogflow(message, project_id, session_id, credentials):
 def send_message():
     session_id = create_unique_session_id()  # Create a unique session ID for each conversation
     message = request.json['message']  # Updated to handle JSON payload
-    project_id = 'image-classification-402513'  # Replace with your Dialogflow project ID
+    project_id = 'Your Google cloud project ID configured for Dialogflow'  # Replace with your Dialogflow project ID
 
     response = send_to_dialogflow(message, project_id, session_id, credentials)
     return jsonify(response)
